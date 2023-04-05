@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(images/background-pic.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* border: 2px solid blue; */
+}
+
+.nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+}
+
+/* .logo
+{
+    border: 2px solid green;
+} */
+
+/* ul li{
+    border: 2px solid yellow;
+} */
+
+.nav .logo
+{
+    width: 120px;
+}
+
+.nav ul li{
+    display: inline-block;
+    margin: 5px 20px;
+    /* list-style: none; */
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.title
+{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 140px;
+
+    /* code line 64 is to see the outline of the text */
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+
+    /* codeline 71 is to see the filled of background image(codeline 67/68) till the outline by clipping*/
+    -webkit-background-clip: text;
+    background-position: -600px 0;
+
+    animation: backcolor 3s linear infinite alternate;
+}
+
+@keyframes backcolor {
+    100%{
+        background-position: 0 0;
+    }
+}
